@@ -1,0 +1,31 @@
+name: PyCards
+
+permissions:
+    contents: read
+
+on:
+    push:
+        branches: ["main"]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build_run:
+    runs-on: ubuntu-latest
+    name: Run Tests
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.14"]
+    steps:
+    - uses: actions/checkout@v5
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v6
+      with:
+        python-version: "${{ matrix.python-version }}"
+    - name: Install dependencies
+      run: python -m pip install uv
+    - name: Test with pytest
+      run: uv run pytest -x -v

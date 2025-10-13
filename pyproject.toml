@@ -1,0 +1,35 @@
+[project]
+name = "pycards"
+version = "0.1.0"
+description = "Playing cards module."
+readme = "README.md"
+authors = [
+    {name = "Kristian Zarebski", email = "krizar312@yahoo.co.uk"}
+]
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.12.1",
+]
+
+[dependency-groups]
+dev = [
+    "hypothesis>=6.140.3",
+    "pytest>=8.4.2",
+    "pytest-sugar>=1.1.1",
+    "ruff>=0.14.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+extend-exclude = ["tests", "examples", "notebooks"]
+target-version = "py314"
+line-length = 88
+
+[tool.ruff.lint]
+mccabe.max-complexity = 11
+select = ["ALL"]
+ignore = ["COM812", "D105", "TRY003", "EM101", "FIX002", "PLR0913", "S311"]
+pydocstyle.convention = "numpy"

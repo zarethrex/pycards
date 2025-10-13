@@ -31,5 +31,5 @@ line-length = 88
 [tool.ruff.lint]
 mccabe.max-complexity = 11
 select = ["ALL"]
-ignore = ["COM812", "D105", "TRY003", "EM101", "FIX002", "PLR0913", "S311"]
+ignore = ["COM812", "D105", "TRY003", "EM101", "FIX002", "PLR0913", "S311", "TC001"]
 pydocstyle.convention = "numpy"

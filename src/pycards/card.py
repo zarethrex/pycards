@@ -3,7 +3,12 @@
 import contextlib
 import itertools
 import uuid
-from typing import Annotated, Literal, Self
+from typing import Annotated, Literal
+
+try:
+    from typing import Self
+except ImportError:
+    from typing_extensions import Self  # noqa: UP035
 
 import pydantic
 

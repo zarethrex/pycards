@@ -1,7 +1,11 @@
 """Class defining a hand of cards."""
 
 import random as rdm
-from typing import Self
+
+try:
+    from typing import Self
+except ImportError:
+    from typing_extensions import Self  # noqa: UP035
 
 import pydantic
 

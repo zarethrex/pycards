@@ -98,4 +98,4 @@ hand.discard(1, to_deck=discard_pile, random=True)
 ## Testing
 | Branch | Test Status |
 |--------|-------------|
-| master | [![CircleCI](https://circleci.com/gh/artemis-beta/pycards/tree/master.svg?style=svg)](https://circleci.com/gh/artemis-beta/pycards/tree/master)|
+| main | [![CI](https://github.com/zarethrex/pycards/actions/workflows/test_build.yml/badge.svg?branch=main)](https://github.com/zarethrex/pycards/actions/workflows/test_build.yml)|

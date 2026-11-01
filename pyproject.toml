@@ -1,12 +1,12 @@
 [project]
 name = "pycards"
-version = "0.1.0"
+version = "0.1.1"
 description = "Playing cards module."
 readme = "README.md"
 authors = [
     {name = "Kristian Zarebski", email = "krizar312@yahoo.co.uk"}
 ]
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 dependencies = [
     "pydantic>=2.12.1",
 ]
@@ -25,7 +25,7 @@ build-backend = "hatchling.build"
 
 [tool.ruff]
 extend-exclude = ["tests", "examples", "notebooks"]
-target-version = "py314"
+target-version = "py315"
 line-length = 88
 
 [tool.ruff.lint]
